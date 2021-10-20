@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FormPage /> should render and match the snapshot 1`] = `
+<React.Fragment>
+  <Helmet
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Form Page
+    </title>
+    <meta
+      content="A page where you can insert and check data from people"
+      name="description"
+    />
+  </Helmet>
+  <Header />
+  <styles__PageWrapper>
+    <Form />
+    <styles__TableWrapper>
+      <DataTable
+        isFormPage={true}
+      />
+    </styles__TableWrapper>
+    <ToastMessage />
+  </styles__PageWrapper>
+  <Footer />
+</React.Fragment>
+`;

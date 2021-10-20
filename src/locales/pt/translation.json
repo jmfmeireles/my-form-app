@@ -1,0 +1,48 @@
+{
+  "app": {
+    "title": "My Form App",
+    "description": "Apenas um simples formulário"
+  },
+  "formPage": {
+    "title": "Formulário",
+    "description": "Página onde pode inserir e validar dados pessoais",
+    "submit": "Submeter",
+    "clear": "Limpar",
+    "requiredField": "Campo mandatório",
+    "maxLengthExceeded": "Tamanho máximo excedido",
+    "name": "Nome",
+    "surname": "Apelido",
+    "country": "País",
+    "birthdate": "Data de nascimento",
+    "noData": "Sem dados",
+    "greetings": "Olá {{name}} do {{country}}",
+    "greetingsWithHappyBirthday": "$t(formPage.greetings). Feliz Aniversário! Hoje tem {{age}} anos.",
+    "greetingsNextBirthday": "$t(formPage.greetings), no dia {{birthdateDay}} do mês {{birthdateMonth}} terá {{age}} anos!",
+    "january": "Janeiro",
+    "february": "Fevereiro",
+    "march": "Março",
+    "april": "Abril",
+    "may": "Maio",
+    "june": "Junho",
+    "july": "Julho",
+    "august": "Agosto",
+    "september": "Setembro",
+    "october": "Outubro",
+    "november": "Novembro",
+    "december": "Dezembro",
+    "viewOldEntries": "Ver entradas antigas"
+  },
+  "notFoundPage": {
+    "title": "Página não encontrada",
+    "accessFormPage": "Aceder ao Formulário"
+  },
+  "requireAuthentication": {
+    "message": "Por favor insira a chave para entrar na página",
+    "confirm": "Confirmar",
+    "key": "Key"
+  },
+  "i18nFeature": {
+    "en": "Inglês",
+    "pt": "Português"
+  }
+}

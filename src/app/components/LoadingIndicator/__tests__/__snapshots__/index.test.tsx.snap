@@ -1,40 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LoadingIndicator /> should match snapshot 1`] = `
-.c0 {
+.c1 {
   -webkit-animation: cqkDSr 2.625s linear infinite;
   animation: cqkDSr 2.625s linear infinite;
-  height: 3rem;
-  width: 3rem;
+  height: 8rem;
+  width: 8rem;
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   transform-origin: center;
+  margin: auto;
 }
 
-.c1 {
+.c2 {
   -webkit-animation: caVMmK 1.5s ease-in-out infinite;
   animation: caVMmK 1.5s ease-in-out infinite;
-  stroke: rgba(215,113,88,1);
+  stroke: #1e22aa;
   stroke-linecap: round;
 }
 
-<svg
+.c0 {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
   class="c0"
-  viewBox="-24 -24 48 48"
 >
-  <circle
+  <svg
     class="c1"
-    cx="0"
-    cy="0"
-    fill="none"
-    r="20"
-    stroke-width="4"
-  />
-</svg>
+    viewBox="-24 -24 48 48"
+  >
+    <circle
+      class="c2"
+      cx="0"
+      cy="0"
+      fill="none"
+      r="20"
+      stroke-width="4"
+    />
+  </svg>
+</div>
 `;
 
 exports[`<LoadingIndicator /> should match snapshot when props changed 1`] = `
-.c0 {
+.c1 {
   -webkit-animation: cqkDSr 2.625s linear infinite;
   animation: cqkDSr 2.625s linear infinite;
   height: 1.25rem;
@@ -42,26 +64,48 @@ exports[`<LoadingIndicator /> should match snapshot when props changed 1`] = `
   -webkit-transform-origin: center;
   -ms-transform-origin: center;
   transform-origin: center;
+  margin: auto;
 }
 
-.c1 {
+.c2 {
   -webkit-animation: caVMmK 1.5s ease-in-out infinite;
   animation: caVMmK 1.5s ease-in-out infinite;
-  stroke: rgba(215,113,88,1);
+  stroke: #1e22aa;
   stroke-linecap: round;
 }
 
-<svg
+.c0 {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
   class="c0"
-  viewBox="-24 -24 48 48"
 >
-  <circle
+  <svg
     class="c1"
-    cx="0"
-    cy="0"
-    fill="none"
-    r="20"
-    stroke-width="4"
-  />
-</svg>
+    viewBox="-24 -24 48 48"
+  >
+    <circle
+      class="c2"
+      cx="0"
+      cy="0"
+      fill="none"
+      r="20"
+      stroke-width="4"
+    />
+  </svg>
+</div>
 `;

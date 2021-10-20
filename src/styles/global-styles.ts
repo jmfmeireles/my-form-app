@@ -9,14 +9,22 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+	font-family: 'Clan', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+h1 {
+	font-weight: 300;
+	color: white;
+	font-size: 3rem;
+	margin: 0 auto;
+}
+
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Clan news', sans-serif;
     padding-top: ${StyleConstants.NAV_BAR_HEIGHT};
     background-color: ${p => p.theme.background};
-  }
-
-  body.fontLoaded {
-    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
   p,

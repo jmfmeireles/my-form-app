@@ -1,19 +1,48 @@
 {
-  "routingFeature": {
-    "title": "Industry-standard Routing",
-    "description": "It's natural to want to add pages (e.g. `/about`) to your application, and routing makes this possible."
+  "app": {
+    "title": "My Form App",
+    "description": "Just a simple form"
+  },
+  "formPage": {
+    "title": "Form Page",
+    "description": "A page where you can insert and check data from people",
+    "submit": "Submit",
+    "clear": "Clear",
+    "requiredField": "Field required",
+    "maxLengthExceeded": "Max. length exceeded",
+    "name": "Name",
+    "surname": "Surname",
+    "country": "Country",
+    "birthdate": "Birthdate",
+    "noData": "No Data",
+    "greetings": "Hello {{name}} from {{country}}",
+    "greetingsWithHappyBirthday": "$t(formPage.greetings). Happy Birthday! Today you have {{age}} years old.",
+    "greetingsNextBirthday": "$t(formPage.greetings), on {{birthdateDay}} of {{birthdateMonth}} you will have {{age}} years old!",
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December",
+    "viewOldEntries": "View old entries"
+  },
+  "notFoundPage": {
+    "title": "Page Not Found",
+    "accessFormPage": "Access Form Page"
+  },
+  "requireAuthentication": {
+    "message": "Please enter the key to enter on page",
+    "confirm": "Confirm",
+    "key": "Key"
   },
   "i18nFeature": {
-    "title": "i18n Internationalization & Pluralization",
-    "selectLanguage": "Select Language",
-    "description": "Scalable apps need to support multiple languages, easily add and support multiple languages. Change the language below to see how instantly it updates the page without refreshing."
-  },
-  "feedbackFeature": {
-    "title": "Instant Feedback",
-    "description": "Enjoy the best DX and code your app at the speed of thought! Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page."
-  },
-  "scaffoldingFeature": {
-    "title": "Quick Scaffolding",
-    "description": "Automate the creation of components, features, routes, selectors and sagas - and their tests - right from the CLI! Avoid fighting the glue of your code and focus on your app!"
+    "en": "English",
+    "pt": "Portuguese"
   }
 }

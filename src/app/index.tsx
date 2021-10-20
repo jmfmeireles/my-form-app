@@ -6,33 +6,51 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import * as React from 'react';
+import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
+import { useInjectReducer } from 'utils/redux-injectors';
+import { useTranslation } from 'react-i18next';
+import { ThemeProvider as MaterialUiThemeProvider } from '@mui/material/styles';
 
 import { GlobalStyle } from '../styles/global-styles';
-
-import { HomePage } from './pages/HomePage/Loadable';
+import { materialUiTheme } from 'styles/theme/themes';
 import { NotFoundPage } from './pages/NotFoundPage/Loadable';
-import { useTranslation } from 'react-i18next';
+import { sliceKey, reducer } from './slice';
+import { FormPage } from './pages/FormPage/Loadable';
+import { OldEntriesPage } from './pages/OldEntriesPage/Loadable';
 
 export function App() {
-  const { i18n } = useTranslation();
-  return (
-    <BrowserRouter>
-      <Helmet
-        titleTemplate="%s - React Boilerplate"
-        defaultTitle="React Boilerplate"
-        htmlAttributes={{ lang: i18n.language }}
-      >
-        <meta name="description" content="A React Boilerplate application" />
-      </Helmet>
+  const { i18n, t } = useTranslation();
+  useInjectReducer({ key: sliceKey, reducer: reducer });
 
-      <Switch>
-        <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
-      <GlobalStyle />
-    </BrowserRouter>
+  return (
+    <MaterialUiThemeProvider theme={materialUiTheme}>
+      <BrowserRouter>
+        <Helmet
+          titleTemplate="%s"
+          defaultTitle={t('app.title')}
+          htmlAttributes={{ lang: i18n.language }}
+        >
+          <meta name="description" content={t('app.description')} />
+        </Helmet>
+
+        <Switch>
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + '/'}
+            component={FormPage}
+          />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + '/revisited'}
+            component={OldEntriesPage}
+          />
+          <Route component={NotFoundPage} />
+        </Switch>
+        <GlobalStyle />
+      </BrowserRouter>
+    </MaterialUiThemeProvider>
   );
 }

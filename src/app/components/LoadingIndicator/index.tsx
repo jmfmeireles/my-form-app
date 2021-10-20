@@ -4,9 +4,11 @@ import styled, { keyframes } from 'styled-components/macro';
 interface Props extends SvgProps {}
 
 export const LoadingIndicator = (props: Props) => (
-  <Svg viewBox="-24 -24 48 48" small={props.small}>
-    <Circle cx="0" cy="0" r="20" fill="none" strokeWidth="4"></Circle>
-  </Svg>
+  <LoadingWrapper>
+    <Svg viewBox="-24 -24 48 48" small={props.small}>
+      <Circle cx="0" cy="0" r="20" fill="none" strokeWidth="4"></Circle>
+    </Svg>
+  </LoadingWrapper>
 );
 
 const speed = 1.5;
@@ -38,13 +40,22 @@ interface SvgProps {
 
 const Svg = styled.svg<SvgProps>`
   animation: ${rotate} ${speed * 1.75}s linear infinite;
-  height: ${p => (p.small ? '1.25rem' : '3rem')};
-  width: ${p => (p.small ? '1.25rem' : '3rem')};
+  height: ${p => (p.small ? '1.25rem' : '8rem')};
+  width: ${p => (p.small ? '1.25rem' : '8rem')};
   transform-origin: center;
+  margin: auto;
 `;
 
 const Circle = styled.circle`
   animation: ${dash} ${speed}s ease-in-out infinite;
   stroke: ${p => p.theme.primary};
   stroke-linecap: round;
+`;
+
+const LoadingWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
