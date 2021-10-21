@@ -15,7 +15,7 @@ export default function ViewMore() {
   return (
     <ButtonWrapper>
       <Button variant="outlined" onClick={navigateToAllEntriesPage}>
-        {t('formPage.viewOldEntries')}
+        {t('formPage.viewAllEntries')}
       </Button>
     </ButtonWrapper>
   );
