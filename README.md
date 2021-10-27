@@ -1,4 +1,4 @@
-# Mu Form
+# My Form
 
 Web app with a simple form to insert some basic data. This app also displays the person data previously entered.
 
